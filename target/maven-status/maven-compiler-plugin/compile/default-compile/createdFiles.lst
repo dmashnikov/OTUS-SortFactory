@@ -1,0 +1,6 @@
+org\dmashnikov\factory\PasteSortFactory.class
+org\dmashnikov\Main.class
+org\dmashnikov\factory\MergeSortFactory.class
+org\dmashnikov\factory\ArraySorter.class
+org\dmashnikov\factory\ChoiseSortFactory.class
+org\dmashnikov\factory\SortFactory.class
