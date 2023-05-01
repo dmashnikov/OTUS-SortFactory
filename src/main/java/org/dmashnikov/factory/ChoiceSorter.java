@@ -1,11 +1,14 @@
 package org.dmashnikov.factory;
 
-import java.util.Arrays;
+public class ChoiceSorter implements ArraySorter {
+    private int[] sortArr;
 
-public class ChoiseSortFactory implements SortFactory {
+    public ChoiceSorter(int[] sortedArray) {
+        this.sortArr = sortedArray;
+    }
 
     @Override
-    public int[] sort(int[] sortArr) {
+    public int[] sort() {
         for (int i = 0; i < sortArr.length; i++) {
             int pos = i;
             int min = sortArr[i];

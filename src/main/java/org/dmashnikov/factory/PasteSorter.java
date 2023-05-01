@@ -1,8 +1,14 @@
 package org.dmashnikov.factory;
 
-public class PasteSortFactory implements SortFactory {
+public class PasteSorter implements ArraySorter {
+    private int[] sortArr;
+
+    public PasteSorter(int[] sortedArray) {
+        this.sortArr = sortedArray;
+    }
+
     @Override
-    public int[] sort(int[] sortArr) {
+    public int[] sort() {
         int j;
         //сортировку начинаем со второго элемента, т.к. считается, что первый элемент уже отсортирован
         for (int i = 1; i < sortArr.length; i++) {

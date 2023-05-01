@@ -2,7 +2,12 @@ package org.dmashnikov.factory;
 
 import java.util.Arrays;
 
-public class MergeSortFactory implements SortFactory {
+public class MergeSorter implements ArraySorter {
+    private int[] sortArr;
+
+    public MergeSorter(int[] sortedArray) {
+        this.sortArr = sortedArray;
+    }
 
     public static int[] mergeSortInner(int[] buffer1, int[] buffer2, int startIndex, int endIndex) {
         if (startIndex >= endIndex - 1) {
@@ -33,7 +38,7 @@ public class MergeSortFactory implements SortFactory {
     }
 
     @Override
-    public int[] sort(int[] sortArr) {
+    public int[] sort() {
         int[] buffer1 = Arrays.copyOf(sortArr, sortArr.length);
         int[] buffer2 = new int[sortArr.length];
         int[] result = mergeSortInner(buffer1, buffer2, 0, sortArr.length);
